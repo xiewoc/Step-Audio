@@ -122,7 +122,7 @@ class StepAudioTTS:
     def register_speakers(self):
         self.speakers_info = {}
 
-        with open("speakers/speakers_info.json", "r") as f:
+        with open("speakers/speakers_info.json", "r", encoding='utf-8') as f:
             speakers_info = json.load(f)
 
         for speaker_id, prompt_text in speakers_info.items():
